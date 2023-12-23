@@ -1,10 +1,11 @@
+import { useExamContext } from "../context/FinalExamContext";
 
 export default function Footer() {
-    return (
-        <div>
-            {/*JSX */}
-            <h1>Footer</h1>
-
-        </div>
-    );
+  const { singleProduct } = useExamContext();
+  return (
+    <div className="m-5 d-flex">
+      <h1>Footer</h1>
+      <img src={singleProduct.image} alt={singleProduct.description} />
+    </div>
+  );
 }
